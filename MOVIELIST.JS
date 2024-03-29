@@ -9,8 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (const key in data) {
                     if (data.hasOwnProperty(key)) {
                         const movieTitle = data[key].title; 
-                        const li = document.createElement('li');
+                        const li = document.createElement('ol');
                         li.textContent = movieTitle;
+                        li.classList.add('slide-in');
+                        const deleteBtn = document.createElement('button');
+                        deleteBtn.textContent = 'Delete';
+                        deleteBtn.classList.add('delete');
+                        deleteBtn.onclick = () => deleteMovie(key, li);
+                        li.appendChild(deleteBtn);
                         movieList.appendChild(li);
                     }
                 }
@@ -18,6 +24,25 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error fetching movie:', error));
     });
 });
+// This function simulates adding a single new movie
+
+
+
+function deleteMovie(movieKey, liElement) {
+    fetch(`https://movie-list-88418-default-rtdb.europe-west1.firebasedatabase.app/movies/${movieKey}.json`, {
+        method: 'DELETE',
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Movie deleted successfully');
+            liElement.remove(); // Remove the list item from the DOM
+        } else {
+            console.error('Failed to delete the movie');
+        }
+    })
+    .catch(error => console.error('Error deleting movie:', error));
+}
+
 
 
 document.addEventListener('DOMContentLoaded', () => {

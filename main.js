@@ -12,12 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Logged in", userCredential.user);
         // clearScreenAndShowMessage("Logged in successfully.");
          logins()
+         
       })
       .catch(error => {
         console.error("Error logging in:", error.message);
-        if (error.code === "auth/invalid-credential") {
-            alert("Username or password not correct");
-        }
+        if (error.code == "auth/invalid-credential") {
+            alert("invalid password");
+        }else if(error.code == "auth/invalid-email") {
+          alert("Username not exisitng, please create an account");
+      }
       });
   });
 
@@ -30,11 +33,13 @@ document.addEventListener('DOMContentLoaded', () => {
     createAccount(email, password)
       .then(userCredential => {
         console.log("Account created", userCredential.user);
-        clearScreenAndShowMessage("Account sucesfully created!");
+        // clearScreenAndShowMessage("Account sucesfully created!");
+        alert("Account has been created. Thank you!");
       })
       .catch(error => {
         console.error("Error creating account:", error.message);
-        clearScreenAndShowMessage("User exisitng try to log in");
+        alert("The email address is invalid");
+        // clearScreenAndShowMessage("User exisitng try to log in");
       });
   });
 });

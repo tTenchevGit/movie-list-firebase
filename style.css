@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #484848;
+    background-color: #000000;
     margin: 0;
 }
 
@@ -54,4 +54,41 @@ button:hover {
     background-color: #0056b3;
 }
 
+.delete {
+    /* Style properties for your delete button */
+    background-color: #007bff; /* Example */
+    color: white; /* Example */
+    border: none; /* Example */
+    cursor: pointer; /* Example */
+    width: auto;
+    height: 36px;
+    margin-left: 25px;
+}
+#movieList #myList ol {
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+   
+}
+
+#newMovieName{
+    margin: 10px 10px 10px 0px;
+
+    border-radius: 5%;
+    width: 200px;
+    height: 25px;
+}
+
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideInFromRight 0.3s ease-out forwards;
+}
 
