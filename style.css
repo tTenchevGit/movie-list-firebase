@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #484848;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between elements */
+    margin-top: 50px; /* Adjust as needed to center vertically */
+}
+
+#movieList {
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between form fields */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Slightly transparent border */
+}
+
+input[type="email"], input[type="password"], button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100%; /* Make inputs and buttons expand to full width of the form */
+}
+#loginForm, #registerForm {
+    display: none;
+}
+
+
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Firebase</title>
+    <script type="module" src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="MOVIELIST.JS"></script>
+    <!-- Removed the imports from the head, as they need to be inside a module script -->
+</head>
+<body>
+    <div id="movieList" >
+        <ul id="myList">
+           
+        </ul>
+        
+        <button id="myButtonlist">Click Me</button>
+
+        <input type="text" id="newMovieName" placeholder="Enter new movie name">
+        <button id="addMovieButton">Add Movie</button>
+
+    </div>
+
+   <!-- Show Buttons -->
+   <div id="container1" class="container">
+    <!-- Login Form -->
+    <div id="loginForm" class="form">
+        <input type="email" id="userEmail" placeholder="Email" />
+        <input type="password" id="userPassword" placeholder="Password" />
+        <button id="loginButton">Login</button>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div id="registerForm" class="form">
+        <input type="email" id="registerEmail" placeholder="Email">
+        <input type="password" id="registerPassword" placeholder="Password">
+        <button id="createAccountButton">Create Account</button>
+    </div>
+
+    <!-- Action Buttons -->
+    <button id="showLoginButton">Login</button>
+    <button id="showCreateAccountButton">Sign Up</button>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Show Login Form
+        document.getElementById('showLoginButton').addEventListener('click', function() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('registerForm').style.display = 'none'; // Hide Sign Up if visible
+        });
+    
+        // Show Sign Up Form
+        document.getElementById('showCreateAccountButton').addEventListener('click', function() {
+            document.getElementById('registerForm').style.display = 'block';
+            document.getElementById('loginForm').style.display = 'none'; // Hide Login if visible
+        });
+    });
+    </script>
+    
+</body>
+</html>
