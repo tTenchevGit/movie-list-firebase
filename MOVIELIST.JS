@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         fetch('https://movie-list-88418-default-rtdb.europe-west1.firebasedatabase.app/movies.json', {
-            method: 'POST', // Using POST to add data
+            method: 'POST', // Using POST to add the data
             headers: {
                 'Content-Type': 'application/json',
             },
