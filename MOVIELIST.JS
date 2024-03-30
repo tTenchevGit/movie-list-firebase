@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(error => console.error('Error fetching movie:', error));
     });
 });
-// This function simulates adding a single new movie
 
 
 
@@ -71,6 +70,26 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch((error) => {
             console.error('Error:', error);
             alert('An error occurred. Please try again.');
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('sort').addEventListener('click', () => {
+        const list = document.getElementById('myList');
+        let itemsArray = Array.from(list.getElementsByTagName('ol'));
+
+        // Sort the array of items based on the text content
+        itemsArray.sort((a, b) => a.textContent.localeCompare(b.textContent));
+
+        // Remove existing items
+        while (list.firstChild) {
+            list.removeChild(list.firstChild);
+        }
+
+        // Append the sorted items back to the list
+        itemsArray.forEach(item => {
+            list.appendChild(item);
         });
     });
 });

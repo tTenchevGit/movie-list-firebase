@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000000;
+    background-color: #1a0d0d;
     margin: 0;
 }
 
@@ -13,6 +13,7 @@ body {
     align-items: center;
     gap: 20px; /* Space between elements */
     margin-top: 50px; /* Adjust as needed to center vertically */
+    background-color: transparent;
 }
 
 #movieList {
@@ -25,7 +26,7 @@ body {
     align-items: center;
     gap: 10px; /* Space between form fields */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency */
+    background-color: rgba(255, 255, 255, 0.8); 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.1); /* Slightly transparent border */
@@ -36,7 +37,8 @@ input[type="email"], input[type="password"], button {
     border-radius: 5px;
     border: 1px solid #ccc;
     outline: none;
-    width: 100%; 
+    width: 90%; 
+    
 }
 #loginForm, #registerForm {
     display: none;
@@ -48,6 +50,7 @@ button {
     background-color: #007bff;
     color: white;
     border: none;
+     margin-top: 10px;
 }
 
 button:hover {
@@ -57,7 +60,9 @@ button:hover {
 .delete {
     /* Style properties for your delete button */
     background-color: #007bff; /* Example */
-    color: white; /* Example */
+    background-clip: border-box;
+    -webkit-text-fill-color: initial;
+    color: white;
     border: none; /* Example */
     cursor: pointer; /* Example */
     width: auto;
@@ -65,13 +70,18 @@ button:hover {
     margin-left: 25px;
 }
 #movieList #myList ol {
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-   
+    font-size: 28px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
+   
+
 
 #newMovieName{
-    margin: 10px 10px 10px 0px;
+    margin: 10px 10px 0px 0px;
 
     border-radius: 5%;
     width: 200px;
