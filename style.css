@@ -64,7 +64,7 @@ button:hover {
     -webkit-text-fill-color: initial;
     color: white;
     border: none; 
-    cursor: pointer; /* Example */
+    cursor: pointer; 
     width: auto;
     height: 36px;
     margin-left: 25px;
