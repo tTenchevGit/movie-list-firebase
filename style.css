@@ -59,7 +59,7 @@ button:hover {
 
 .delete {
     /* Style properties for your delete button */
-    background-color: #007bff; /* Example */
+    background-color: #007bff;
     background-clip: border-box;
     -webkit-text-fill-color: initial;
     color: white;
