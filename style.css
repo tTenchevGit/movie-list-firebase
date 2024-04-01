@@ -63,7 +63,7 @@ button:hover {
     background-clip: border-box;
     -webkit-text-fill-color: initial;
     color: white;
-    border: none; /* Example */
+    border: none; 
     cursor: pointer; /* Example */
     width: auto;
     height: 36px;
