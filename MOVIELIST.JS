@@ -53,19 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         fetch('https://movie-list-88418-default-rtdb.europe-west1.firebasedatabase.app/movies.json', {
-            method: 'POST', // Using POST to add the data
+            method: 'POST', 
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                title: movieName // Assuming your database expects an object with a title property
+                title: movieName 
             })
         })
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
             alert('Movie added successfully!');
-            document.getElementById('newMovieName').value = ''; // Clear input field after successful submission
+            document.getElementById('newMovieName').value = ''; 
         })
         .catch((error) => {
             console.error('Error:', error);
